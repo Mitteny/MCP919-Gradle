@@ -37,13 +37,13 @@ Just use gradle to build this project and you'll find the jar file under `build\
 4. Then, there should be an error when MCP tries to recompile Minecraft. Don't worry, you can fix it by changing codes in  `mcp\src\minecraft\net\minecraft\world\gen\structure\StructureMineshaftPieces.java` from
 
    ```java
-   for (lvt_5_1_ = 0; k < this.boundingBox.getZSize(); k = k + 4)
+   for (lvt_5_1_ = 0; k < this.boundingBox.getXSize(); k = k + 4)
    ```
 
    to 
 
    ```java
-   for (int k = 0; k < this.boundingBox.getZSize(); k = k + 4)
+   for (int k = 0; k < this.boundingBox.getXSize(); k = k + 4)
    ```
 
    Then, you've successfully fixed the error!
